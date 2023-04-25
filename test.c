@@ -4,6 +4,7 @@
 
 int	main (void)
 {
+	/*
 	int	result;
 
 	result = ft_printf("Ola %c%c%c %%%% %s\n", 'o', 'l', 'a', "ola");
@@ -11,4 +12,9 @@ int	main (void)
 	printf("\n");
  	result = printf("Ola %c%c%c %%%% %s\n", 'o', 'l', 'a', "ola");
  	printf("Result: %i\n", result);
+	*/
+      char *pointer = "little";
+	  ft_printf("Here is a number-%4s-and a-%10s-word.\n", "number", pointer);
+	  printf("\n");
+      printf("Here is a number-%4s-and a-%10s-word.\n", "number", pointer);
 }
