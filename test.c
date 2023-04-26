@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:08:54 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 20:55:03 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/26 22:29:31 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,39 +20,39 @@
 
 int	main(void)
 {
-
 	printf("Teste 1: %i.\n", 5000);
-	ft_printf("Teste 1a: %i.\n", 5000);
+	ft_printf("Teste 1: %i.\n", 5000);
 	printf("Teste 2: % i.\n", 5000);
-	ft_printf("Teste 2a: % i.\n", 5000);
+	ft_printf("Teste 2: % i.\n", 5000);
 	printf("Teste 3: %5i.\n", 5000);
-	ft_printf("Teste 3a: %5i.\n", 5000);
+	ft_printf("Teste 3: %5i.\n", 5000);
 	printf("Teste 4: %1i.\n", 5000);
-	ft_printf("Teste 4a: %1i.\n", 5000);
+	ft_printf("Teste 4: %1i.\n", 5000);
 	printf("Teste 5: %10i.\n", 5000);
-	ft_printf("Teste 5a: %10i.\n", 5000);
+	ft_printf("Teste 5: %10i.\n", 5000);
 	printf("Teste 6: %.5i.\n", 5000);
-	ft_printf("Teste 6a: %.5i.\n", 5000);
+	ft_printf("Teste 6: %.5i.\n", 5000);
 	printf("Teste 7: %.1i.\n", 5000);
-	ft_printf("Teste 7a: %.1i.\n", 5000);
+	ft_printf("Teste 7: %.1i.\n", 5000);
 	printf("Teste 8: %.10i.\n", 5000);
-	ft_printf("Teste 8a: %.10i.\n", 5000);
+	ft_printf("Teste 8: %.10i.\n", 5000);
 	printf("Teste 9: %5.5i.\n", 5000);
-	ft_printf("Teste 9a: %5.5i.\n", 5000);
-	printf("Teste 10: %10.15i.\n", 5000);		// Width é tamanho total da string
-	ft_printf("Teste 10a: %10.15i.\n", 5000); // Width é tamanho total da string
-	printf("Teste 11: %15.10i.\n", 5000);		// Precision é tamanho da parte numerica
-	ft_printf("Teste 11a: %15.10i.\n", 5000); // Precision é tamanho da parte numerica
+	ft_printf("Teste 9: %5.5i.\n", 5000);
+	printf("Teste 10: %10.15i.\n", 5000);
+	ft_printf("Teste 10: %10.15i.\n", 5000);
+	printf("Teste 11: %15.10i.\n", 5000);
+	ft_printf("Teste 11: %15.10i.\n", 5000);
 	printf("Teste 12: %-i.\n", 5000);
-	ft_printf("Teste 12a: %-i.\n", 5000);
+	ft_printf("Teste 12: %-i.\n", 5000);
 	printf("Teste 13: %+i.\n", 5000);
-	ft_printf("Teste 13a: %+i.\n", 5000);
+	ft_printf("Teste 13: %+i.\n", 5000);
 	printf("Teste 14: % i.\n", 5000);
-	ft_printf("Teste 14a: % i.\n", 5000);
+	ft_printf("Teste 14: % i.\n", 5000);
 	printf("Teste 15: %0i.\n", 5000);
-	ft_printf("Teste 15a: %0i.\n", 5000);
+	ft_printf("Teste 15: %0i.\n", 5000);
 
-/*
+	printf("\n**********\n");
+
 	printf("Teste 1: %i.\n", -5000);
 	ft_printf("Teste 1: %i.\n", -5000);
 	printf("Teste 2: % i.\n", -5000);
@@ -71,10 +71,10 @@ int	main(void)
 	ft_printf("Teste 8: %.10i.\n", -5000);
 	printf("Teste 9: %5.5i.\n", -5000);
 	ft_printf("Teste 9: %5.5i.\n", -5000);
-	printf("Teste 10: %10.15i.\n", -5000);		// Width é tamanho total da string
-	ft_printf("Teste 10: %10.15i.\n", -5000); // Width é tamanho total da string
-	printf("Teste 11: %15.10i.\n", -5000);		// Precision é tamanho da parte numerica
-	ft_printf("Teste 11: %15.10i.\n", -5000); // Precision é tamanho da parte numerica
+	printf("Teste 10: %10.15i.\n", -5000);
+	ft_printf("Teste 10: %10.15i.\n", -5000);
+	printf("Teste 11: %15.10i.\n", -5000);
+	ft_printf("Teste 11: %15.10i.\n", -5000);
 	printf("Teste 12: %-i.\n", -5000);
 	ft_printf("Teste 12: %-i.\n", -5000);
 	printf("Teste 13: %+i.\n", -5000);
@@ -84,37 +84,67 @@ int	main(void)
 	printf("Teste 15: %0i.\n", -5000);
 	ft_printf("Teste 15: %0i.\n", -5000);
 
+	printf("\n**********\n");
 
 	printf("Teste 1: %-i.\n", -5000);
+	ft_printf("Teste 1: %-i.\n", -5000);
 	printf("Teste 2: %- i.\n", -5000);
+	ft_printf("Teste 2: %- i.\n", -5000);
 	printf("Teste 3: %-5i.\n", -5000);
+	ft_printf("Teste 3: %-5i.\n", -5000);
 	printf("Teste 4: %-1i.\n", -5000);
+	ft_printf("Teste 4: %-1i.\n", -5000);
 	printf("Teste 5: %-10i.\n", -5000);
+	ft_printf("Teste 5: %-10i.\n", -5000);
 	printf("Teste 6: %-.5i.\n", -5000);
+	ft_printf("Teste 6: %-.5i.\n", -5000);
 	printf("Teste 7: %-.1i.\n", -5000);
+	ft_printf("Teste 7: %-.1i.\n", -5000);
 	printf("Teste 8: %-.10i.\n", -5000);
+	ft_printf("Teste 8: %-.10i.\n", -5000);
 	printf("Teste 9: %-5.5i.\n", -5000);
-	printf("Teste 10: %-10.15i.\n", -5000);		// Width é tamanho total da string
-	printf("Teste 11: %-15.10i.\n", -5000);		// Precision é tamanho da parte numerica
+	ft_printf("Teste 9: %-5.5i.\n", -5000);
+	printf("Teste 10: %-10.15i.\n", -5000);
+	ft_printf("Teste 10: %-10.15i.\n", -5000);
+	printf("Teste 11: %-15.10i.\n", -5000);
+	ft_printf("Teste 11: %-15.10i.\n", -5000);
 	printf("Teste 12: %-i.\n", -5000);
+	ft_printf("Teste 12: %-i.\n", -5000);
 	printf("Teste 13: %-+i.\n", -5000);
+	ft_printf("Teste 13: %-+i.\n", -5000);
 	printf("Teste 14: %- i.\n", -5000);
+	ft_printf("Teste 14: %- i.\n", -5000);
+
+	printf("\n**********\n");
 
 	printf("Teste 1: %i.\n", -5000);
+	ft_printf("Teste 1: %i.\n", -5000);
 	printf("Teste 3: %+5i.\n", 5000);
+	ft_printf("Teste 3: %+5i.\n", 5000);
 	printf("Teste 4: %+1i.\n", 5000);
+	ft_printf("Teste 4: %+1i.\n", 5000);
 	printf("Teste 5: %+10i.\n", 5000);
+	ft_printf("Teste 5: %+10i.\n", 5000);
 	printf("Teste 6: %+.5i.\n", 5000);
+	ft_printf("Teste 6: %+.5i.\n", 5000);
 	printf("Teste 7: %+.1i.\n", 5000);
+	ft_printf("Teste 7: %+.1i.\n", 5000);
 	printf("Teste 8: %+.10i.\n", 5000);
+	ft_printf("Teste 8: %+.10i.\n", 5000);
 	printf("Teste 9: %+5.5i.\n", 5000);
+	ft_printf("Teste 9: %+5.5i.\n", 5000);
 	printf("Teste 10: %+10.15i.\n", 5000);		// Width é tamanho total da string
+	ft_printf("Teste 10: %+10.15i.\n", 5000); // Width é tamanho total da string
 	printf("Teste 11: %+15.10i.\n", 5000);		// Precision é tamanho da parte numerica
+	ft_printf("Teste 11: %+15.10i.\n", 5000); // Precision é tamanho da parte numerica
 	printf("Teste 12: %+-i.\n", 5000);
+	ft_printf("Teste 12: %+-i.\n", 5000);
 	printf("Teste 13: %+i.\n", 5000);
-	printf("Teste 15: %+0i.\n", 5000);		
-*/
-/* 
+	ft_printf("Teste 13: %+i.\n", 5000);
+	printf("Teste 15: %+0i.\n", 5000);	
+	ft_printf("Teste 15: %+0i.\n", 5000);
+/*
+
 	STRING TESTS
 	int	result;
 	
@@ -183,7 +213,7 @@ int	main(void)
 	result = printf("#11 Ola %-10.5s.", "Jamaicano");
 	printf("Result: %i\n\n", result);
  */
-	
+
 /*
 	ft_printf("Here is a number", 5);
 	printf("\n");
