@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 22:14:09 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/25 17:34:48 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/26 19:29:19 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ t_flags	*newflag(void)
 	flag->space = 0;
 	flag->plus = 0;
 	flag->width = 0;
-	flag->star = 0;
 	flag->precision = 0;
 	return (flag);
 }
@@ -47,19 +46,19 @@ void	ft_checkflag_values(char *string, int *i, t_flags *flag)
 		flag->precision = ft_atoi(&string[*i]);
 	else
 		flag->width = ft_atoi(&string[*i]);
-	while (is_arg(string[*i]) == 0)
+	while (ft_isdigit(string[*i]) == 1)
 		(*i)++;
+	(*i)--;
 }
 
 t_flags	*ft_checkflag(char *string, int *i)
 {
 	t_flags	*flag;
-
 	flag = newflag();
+
 	if (!flag)
 		return (NULL);
-	(*i)++;
-	while (is_arg(string[*i]) == 0)
+	while (is_arg(string[++(*i)]) == 0)
 	{
 		if (string[*i] == '+')
 			flag->plus = 1;
@@ -73,9 +72,9 @@ t_flags	*ft_checkflag(char *string, int *i)
 			flag->zero = 1;
 		else if (string[*i] == '.')
 			flag->dot = 1;
-		else if ((string[*i] >= '1' && string[*i] <= '9') || string[*i] == '*')
+		else if ((string[*i] >= '1' && string[*i] <= '9')
+			&& (!flag->precision || !flag -> width))
 			ft_checkflag_values(string, i, flag);
-		(*i)++;
 	}
 	return (flag);
 }

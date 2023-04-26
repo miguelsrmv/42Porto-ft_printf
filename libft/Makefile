@@ -6,7 +6,7 @@
 #    By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/15 19:59:42 by mde-sa--          #+#    #+#              #
-#    Updated: 2023/04/25 15:23:48 by mde-sa--         ###   ########.fr        #
+#    Updated: 2023/04/26 11:45:13 by mde-sa--         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,21 +35,21 @@ OBJBON	=	${SRCBON:.c=.o}
 RM		=	rm -f
 
 .c.o:
-	${CC} ${FLAGS} -c $< -I . -o $@
+	@${CC} ${FLAGS} -c $< -I . -o $@
 
 $(NAME): $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	@ar -rcs $(NAME) $(OBJ)
 
 all: $(NAME)
 
 bonus: ${OBJBON}
-	ar -rcs ${NAME} ${OBJBON}
+	@ar -rcs ${NAME} ${OBJBON}
 
 clean:
-	rm -rf $(OBJ) $(OBJBON)
+	@rm -rf $(OBJ) $(OBJBON)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 

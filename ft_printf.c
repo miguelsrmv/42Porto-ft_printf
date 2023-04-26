@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:39:15 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/25 17:26:03 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/26 20:37:54 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	check_arg(char *string, int i, va_list args)
+int	check_arg(char *string, int *i, va_list args)
 {
-	t_flags	*flags;
+	t_flags	*flag;
 	int		counter;
 
-	flags = ft_checkflag(string, &i);
+	printf("##");
+	flag = ft_checkflag(string, i);
 	counter = 0;
-	if (string[i] == '%')
-		counter += ft_printf_char('%', flags);
-	else if (string[i] == 'c')
-		counter += ft_printf_char(va_arg(args, int), flags);
-	else if (string[i] == 's')
-		counter += ft_printf_string(va_arg(args, char *), flags);
-	else if (string[i] == 'd' || string[i] == 'i')
-		counter = ft_printf_int(va_arg(args, int), flags);
+	if (string[*i] == '%')
+		counter += ft_printf_char('%', flag);
+	else if (string[*i] == 'c')
+		counter += ft_printf_char(va_arg(args, int), flag);
+	else if (string[*i] == 's')
+		counter += ft_printf_string(va_arg(args, char *), flag);
+	else if (string[*i] == 'd' || string[*i] == 'i')
+		counter += ft_printf_int(va_arg(args, int), flag);
 	/*
 	else if (*copy == 'u')
 		*counter = printf_u(va_arg(args, unsigned int), counter);
@@ -56,10 +57,7 @@ int	ft_printf(const char *string, ...)
 	while (str[i])
 	{
 		if (str[i] == '%')
-		{
-			counter += check_arg(str, i, args);
-			i++;
-		}
+			counter += check_arg(str, &i, args);
 		else
 		{
 			ft_putchar_fd(str[i], 1);
