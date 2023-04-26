@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:33:35 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 22:24:50 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/26 22:37:04 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char	*ft_flag_padding(char *string, t_flags *flag, int integer)
 	}
 	else
 		sign = '+';
+	if (integer >= 0 && flag->plus)
+		(int)(flag->precision)++;
 	i = 0;
 	if (flag->plus || integer < 0)
 		newstr[i++] = sign;
