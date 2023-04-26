@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:39:15 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 20:37:54 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/26 20:55:00 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ int	check_arg(char *string, int *i, va_list args)
 {
 	t_flags	*flag;
 	int		counter;
-
-	printf("##");
 	flag = ft_checkflag(string, i);
 	counter = 0;
+
 	if (string[*i] == '%')
 		counter += ft_printf_char('%', flag);
 	else if (string[*i] == 'c')

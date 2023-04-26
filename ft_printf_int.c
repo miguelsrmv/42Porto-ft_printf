@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:33:35 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 20:25:36 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/26 21:19:58 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ char	*ft_flag_space(char *string)
 char	*ft_flag_padding(char *string, t_flags *flag, int integer)
 {
 	char	*newstr;
-	char 	sign;
-	int 	i;
-
+	char	sign;
+	int		i;
 	newstr = (char *)malloc(ft_strlen(string) + 1);
 	if (!newstr)
 		return (0);
@@ -42,7 +41,7 @@ char	*ft_flag_padding(char *string, t_flags *flag, int integer)
 	i = 0;
 	if (flag->plus)
 		newstr[i++] = sign;
-	while (i < (int)(flag->width - ft_strlen(string)))
+	while (i < (int)(flag->precision - ft_strlen(string)))
 		newstr[i++] = '0';
 	ft_strlcpy(&newstr[i], string, ft_strlen(string) + 1);
 	return (newstr);
@@ -66,7 +65,6 @@ int	ft_int_format(char *string, t_flags *flag)
 	}
 	else
 	{
-
 		while (i < (int)(flag->width - ft_strlen(string)))
 			newstr[i++] = ' ';
 		ft_strlcpy(&newstr[i], string, ft_strlen(string) + 1);
@@ -83,9 +81,6 @@ int	ft_printf_int(int integer, t_flags *flag)
 	int		count;
 
 	str = ft_itoa(integer);
-	/*printf("**string: %s** ", str);
-	printf("**width: %d** ", flag->width);
-	printf("**precision: %d** ", flag->precision);*/
 	if (!str)
 	{
 		free(flag);
@@ -95,8 +90,7 @@ int	ft_printf_int(int integer, t_flags *flag)
 		str = ft_flag_space(str);
 	if (!flag->width)
 		flag->width = ft_strlen(str);
-
-	if (flag->precision)
+	if (flag->precision || flag->plus)
 		str = ft_flag_padding(str, flag, integer);
 	count = ft_int_format(str, flag);
 	free(flag);

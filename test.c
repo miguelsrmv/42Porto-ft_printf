@@ -6,9 +6,14 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:08:54 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 20:28:51 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/26 20:55:03 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	printf("*");
+	fflush(stdout);
+*/
 
 #include <stdio.h>
 #include "ft_printf.h"
