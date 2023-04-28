@@ -6,7 +6,7 @@
 #    By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 16:13:23 by mde-sa--          #+#    #+#              #
-#    Updated: 2023/04/26 15:16:00 by mde-sa--         ###   ########.fr        #
+#    Updated: 2023/04/27 00:17:50 by mde-sa--         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,9 +31,9 @@ AR = ar -rc
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make -C libft
-	@cp libft/libft.a $(NAME)
-	@$(AR) $(NAME) $(OBJ)
+	make -C libft
+	cp libft/libft.a $(NAME)
+	$(AR) $(NAME) $(OBJ)
 
 test:
 	@make

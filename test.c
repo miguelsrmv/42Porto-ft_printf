@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:08:54 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 22:29:31 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/27 00:22:10 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,134 +20,312 @@
 
 int	main(void)
 {
-	printf("Teste 1: %i.\n", 5000);
-	ft_printf("Teste 1: %i.\n", 5000);
-	printf("Teste 2: % i.\n", 5000);
-	ft_printf("Teste 2: % i.\n", 5000);
-	printf("Teste 3: %5i.\n", 5000);
-	ft_printf("Teste 3: %5i.\n", 5000);
-	printf("Teste 4: %1i.\n", 5000);
-	ft_printf("Teste 4: %1i.\n", 5000);
-	printf("Teste 5: %10i.\n", 5000);
-	ft_printf("Teste 5: %10i.\n", 5000);
-	printf("Teste 6: %.5i.\n", 5000);
-	ft_printf("Teste 6: %.5i.\n", 5000);
-	printf("Teste 7: %.1i.\n", 5000);
-	ft_printf("Teste 7: %.1i.\n", 5000);
-	printf("Teste 8: %.10i.\n", 5000);
-	ft_printf("Teste 8: %.10i.\n", 5000);
-	printf("Teste 9: %5.5i.\n", 5000);
-	ft_printf("Teste 9: %5.5i.\n", 5000);
-	printf("Teste 10: %10.15i.\n", 5000);
-	ft_printf("Teste 10: %10.15i.\n", 5000);
-	printf("Teste 11: %15.10i.\n", 5000);
-	ft_printf("Teste 11: %15.10i.\n", 5000);
-	printf("Teste 12: %-i.\n", 5000);
-	ft_printf("Teste 12: %-i.\n", 5000);
-	printf("Teste 13: %+i.\n", 5000);
-	ft_printf("Teste 13: %+i.\n", 5000);
-	printf("Teste 14: % i.\n", 5000);
-	ft_printf("Teste 14: % i.\n", 5000);
-	printf("Teste 15: %0i.\n", 5000);
-	ft_printf("Teste 15: %0i.\n", 5000);
-
-	printf("\n**********\n");
-
-	printf("Teste 1: %i.\n", -5000);
-	ft_printf("Teste 1: %i.\n", -5000);
-	printf("Teste 2: % i.\n", -5000);
-	ft_printf("Teste 2: % i.\n", -5000);
-	printf("Teste 3: %5i.\n", -5000);
-	ft_printf("Teste 3: %5i.\n", -5000);
-	printf("Teste 4: %1i.\n", -5000);
-	ft_printf("Teste 4: %1i.\n", -5000);
-	printf("Teste 5: %10i.\n", -5000);
-	ft_printf("Teste 5: %10i.\n", -5000);
-	printf("Teste 6: %.5i.\n", -5000);
-	ft_printf("Teste 6: %.5i.\n", -5000);
-	printf("Teste 7: %.1i.\n", -5000);
-	ft_printf("Teste 7: %.1i.\n", -5000);
-	printf("Teste 8: %.10i.\n", -5000);
-	ft_printf("Teste 8: %.10i.\n", -5000);
-	printf("Teste 9: %5.5i.\n", -5000);
-	ft_printf("Teste 9: %5.5i.\n", -5000);
-	printf("Teste 10: %10.15i.\n", -5000);
-	ft_printf("Teste 10: %10.15i.\n", -5000);
-	printf("Teste 11: %15.10i.\n", -5000);
-	ft_printf("Teste 11: %15.10i.\n", -5000);
-	printf("Teste 12: %-i.\n", -5000);
-	ft_printf("Teste 12: %-i.\n", -5000);
-	printf("Teste 13: %+i.\n", -5000);
-	ft_printf("Teste 13: %+i.\n", -5000);
-	printf("Teste 14: % i.\n", -5000);
-	ft_printf("Teste 14: % i.\n", -5000);
-	printf("Teste 15: %0i.\n", -5000);
-	ft_printf("Teste 15: %0i.\n", -5000);
-
-	printf("\n**********\n");
-
-	printf("Teste 1: %-i.\n", -5000);
-	ft_printf("Teste 1: %-i.\n", -5000);
-	printf("Teste 2: %- i.\n", -5000);
-	ft_printf("Teste 2: %- i.\n", -5000);
-	printf("Teste 3: %-5i.\n", -5000);
-	ft_printf("Teste 3: %-5i.\n", -5000);
-	printf("Teste 4: %-1i.\n", -5000);
-	ft_printf("Teste 4: %-1i.\n", -5000);
-	printf("Teste 5: %-10i.\n", -5000);
-	ft_printf("Teste 5: %-10i.\n", -5000);
-	printf("Teste 6: %-.5i.\n", -5000);
-	ft_printf("Teste 6: %-.5i.\n", -5000);
-	printf("Teste 7: %-.1i.\n", -5000);
-	ft_printf("Teste 7: %-.1i.\n", -5000);
-	printf("Teste 8: %-.10i.\n", -5000);
-	ft_printf("Teste 8: %-.10i.\n", -5000);
-	printf("Teste 9: %-5.5i.\n", -5000);
-	ft_printf("Teste 9: %-5.5i.\n", -5000);
-	printf("Teste 10: %-10.15i.\n", -5000);
-	ft_printf("Teste 10: %-10.15i.\n", -5000);
-	printf("Teste 11: %-15.10i.\n", -5000);
-	ft_printf("Teste 11: %-15.10i.\n", -5000);
-	printf("Teste 12: %-i.\n", -5000);
-	ft_printf("Teste 12: %-i.\n", -5000);
-	printf("Teste 13: %-+i.\n", -5000);
-	ft_printf("Teste 13: %-+i.\n", -5000);
-	printf("Teste 14: %- i.\n", -5000);
-	ft_printf("Teste 14: %- i.\n", -5000);
-
-	printf("\n**********\n");
-
-	printf("Teste 1: %i.\n", -5000);
-	ft_printf("Teste 1: %i.\n", -5000);
-	printf("Teste 3: %+5i.\n", 5000);
-	ft_printf("Teste 3: %+5i.\n", 5000);
-	printf("Teste 4: %+1i.\n", 5000);
-	ft_printf("Teste 4: %+1i.\n", 5000);
-	printf("Teste 5: %+10i.\n", 5000);
-	ft_printf("Teste 5: %+10i.\n", 5000);
-	printf("Teste 6: %+.5i.\n", 5000);
-	ft_printf("Teste 6: %+.5i.\n", 5000);
-	printf("Teste 7: %+.1i.\n", 5000);
-	ft_printf("Teste 7: %+.1i.\n", 5000);
-	printf("Teste 8: %+.10i.\n", 5000);
-	ft_printf("Teste 8: %+.10i.\n", 5000);
-	printf("Teste 9: %+5.5i.\n", 5000);
-	ft_printf("Teste 9: %+5.5i.\n", 5000);
-	printf("Teste 10: %+10.15i.\n", 5000);		// Width é tamanho total da string
-	ft_printf("Teste 10: %+10.15i.\n", 5000); // Width é tamanho total da string
-	printf("Teste 11: %+15.10i.\n", 5000);		// Precision é tamanho da parte numerica
-	ft_printf("Teste 11: %+15.10i.\n", 5000); // Precision é tamanho da parte numerica
-	printf("Teste 12: %+-i.\n", 5000);
-	ft_printf("Teste 12: %+-i.\n", 5000);
-	printf("Teste 13: %+i.\n", 5000);
-	ft_printf("Teste 13: %+i.\n", 5000);
-	printf("Teste 15: %+0i.\n", 5000);	
-	ft_printf("Teste 15: %+0i.\n", 5000);
-/*
-
-	STRING TESTS
-	int	result;
+	int result;
 	
+	/*
+	UNS INT RESULT
+
+
+	unsigned int n;
+
+	n = 4294967287;
+
+	result = printf("Teste 1: %u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 1: %u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 2: %20u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 2: %20u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 3: %5u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 3: %5u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 4: %1u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 4: %1u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 5: %10u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 5: %10u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 6: %.5u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 6: %.5u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 7: %.1u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 7: %.1u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 8: %.10u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 8: %.10u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 9: %20.5u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 9: %20.5u.\n", n);
+	printf("Result: %i\n\n", result);
+
+	result = printf("Teste 10: %10.21u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 10: %10.21u.\n", n);
+	printf("Result: %i\n\n", result);
+
+	result = printf("Teste 11: %15.21u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 11: %15.21u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 12: %-20u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 12: %-20u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 15: %0u.\n", n);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 15: %0u.\n", n);
+	printf("Result: %i\n\n", result);
+
+*/
+/*
+	result = printf("Teste 1: %i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 1: %i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 2: % i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 2: % i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 3: %5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 3: %5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 4: %1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 4: %1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 5: %10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 5: %10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 6: %.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 6: %.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 7: %.1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 7: %.1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 8: %.10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 8: %.10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 9: %5.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 9: %5.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 10: %10.15i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 10: %10.15i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 11: %15.10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 11: %15.10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 12: %-i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 12: %-i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 13: %+i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 13: %+i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 14: % i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 14: % i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 15: %0i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 15: %0i.\n", 5000);
+	printf("Result: %i\n\n", result);
+
+	printf("\n**********\n");
+
+	result = printf("Teste 1: %i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 1: %i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 2: % i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 2: % i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 3: %5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 3: %5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 4: %1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 4: %1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 5: %10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 5: %10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 6: %.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 6: %.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 7: %.1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 7: %.1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 8: %.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 8: %.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 9: %5.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 9: %5.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 10: %10.15i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 10: %10.15i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 11: %15.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 11: %15.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 12: %-i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 12: %-i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 13: %+i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 13: %+i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 14: % i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 14: % i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 15: %0i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 15: %0i.\n", -5000);
+	printf("Result: %i\n\n", result);
+
+	printf("\n**********\n");
+
+	result = printf("Teste 1: %-i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 1: %-i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 2: %- i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 2: %- i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 3: %-5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 3: %-5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 4: %-1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 4: %-1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 5: %-10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 5: %-10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 6: %-.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 6: %-.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 7: %-.1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 7: %-.1i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 8: %-.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 8: %-.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 9: %-5.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 9: %-5.5i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 10: %-10.15i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 10: %-10.15i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 11: %-15.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 11: %-15.10i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 12: %-i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 12: %-i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 13: %-+i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 13: %-+i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 14: %- i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 14: %- i.\n", -5000);
+	printf("Result: %i\n\n", result);
+
+	printf("\n**********\n");
+
+	result = printf("Teste 1: %i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 1: %i.\n", -5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 3: %+5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 3: %+5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 4: %+1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 4: %+1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 5: %+10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 5: %+10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 6: %+.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 6: %+.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 7: %+.1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 7: %+.1i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 8: %+.10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 8: %+.10i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 9: %+5.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 9: %+5.5i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 10: %+10.15i.\n", 5000);		// Width é tamanho total da string
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 10: %+10.15i.\n", 5000); // Width é tamanho total da string
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 11: %+15.10i.\n", 5000);		// Precision é tamanho da parte numerica
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 11: %+15.10i.\n", 5000); // Precision é tamanho da parte numerica
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 12: %+-i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 12: %+-i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 13: %+i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 13: %+i.\n", 5000);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 15: %+0i.\n", 5000);	
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 15: %+0i.\n", 5000);
+	printf("Result: %i\n\n", result);
+*/
+	/*
  	result = ft_printf("#1 Ola %15.5s.", "Jamaicano");
 	printf("Result: %i\n\n", result);
  	result = printf("#1 Ola %15.5s.", "Jamaicano");
@@ -212,7 +390,7 @@ int	main(void)
 	printf("Result: %i\n\n", result);
 	result = printf("#11 Ola %-10.5s.", "Jamaicano");
 	printf("Result: %i\n\n", result);
- */
+*/
 
 /*
 	ft_printf("Here is a number", 5);
