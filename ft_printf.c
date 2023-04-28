@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:39:15 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 23:17:54 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/28 08:23:57 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,10 @@ int	check_arg(char *string, int *i, va_list args)
 		counter += ft_printf_int(va_arg(args, int), flag);
 	else if (string[*i] == 'u')
 		counter += ft_printf_unsint(va_arg(args, unsigned int), flag);
-	/*
-	else if (*copy == 'x')
-		*counter = printf_idx(va_arg(args, int), "0123456789abcdef", counter);
-	else if (*copy == 'X')
-		*counter = printf_idx(va_arg(args, int), "0123456789ABCDEF", counter);
-	*/
+	else if (string[*i] == 'x')
+		counter = ft_printf_base(va_arg(args, int), "0123456789abcdef", flag);
+	else if (string[*i] == 'X')
+		counter = ft_printf_base(va_arg(args, int), "0123456789ABCDEF", flag);
 	/*else if (*copy == p)
 		*counter = ptf_ptr(va_arg(args, unsigned long), counter);*/
 	return (counter);
