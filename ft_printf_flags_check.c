@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_flags.c                                  :+:      :+:    :+:   */
+/*   ft_printf_flags_check.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 22:14:09 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/26 19:29:19 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 11:04:07 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ void	ft_checkflag_values(char *string, int *i, t_flags *flag)
 t_flags	*ft_checkflag(char *string, int *i)
 {
 	t_flags	*flag;
-	flag = newflag();
 
+	flag = newflag();
 	if (!flag)
 		return (NULL);
 	while (is_arg(string[++(*i)]) == 0)

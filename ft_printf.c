@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:39:15 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/28 09:02:47 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 11:25:45 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	check_arg(char *string, int *i, va_list args)
 {
 	t_flags	*flag;
 	int		counter;
+
 	flag = ft_checkflag(string, i);
 	counter = 0;
-
 	if (string[*i] == '%')
 		counter += ft_printf_char('%', flag);
 	else if (string[*i] == 'c')
@@ -35,8 +35,8 @@ int	check_arg(char *string, int *i, va_list args)
 		counter += ft_printf_base(va_arg(args, int), "0123456789abcdef", flag);
 	else if (string[*i] == 'X')
 		counter += ft_printf_base(va_arg(args, int), "0123456789ABCDEF", flag);
-	/*else if (*copy == p)
-		*counter = ptf_ptr(va_arg(args, unsigned long), counter);*/
+	else if (string[*i] == 'p')
+		counter += ft_printf_ptr(va_arg(args, void *), flag);
 	return (counter);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:08:54 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/28 15:30:40 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:01:28 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,32 @@
 
 #include <stdio.h>
 #include "ft_printf.h"
+#include <limits.h>
 
 int	main(void)
 {
-	
+
 	int result;
+
+	result = printf("Teste 1: %p.\n", (void *)0);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 1: %p.\n", (void *)0);
+	printf("Result: %i\n\n", result);
+
 	
-	result = printf("Teste 1: %8i.\n", 161616);
+/*
+	result = printf("Teste 1: %20.15x.\n", 1616161616);
 	printf("Result: %i\n\n", result);
-	result = printf("Teste 1: %0#8x.\n", 161616);
+	result = ft_printf("Teste 1: %20.15x.\n", 1616161616);
 	printf("Result: %i\n\n", result);
-	result = ft_printf("Teste 1: %0#8x.\n", 161616);
+	result = printf("Teste 1: %#20.15x.\n", 1616161616);
 	printf("Result: %i\n\n", result);
-	/*
-	UNS INT RESULT
+	result = ft_printf("Teste 1: %#20.15x.\n", 1616161616);
+	printf("Result: %i\n\n", result);
+*/
 
 
+/*
 	unsigned int n;
 
 	n = 4294967287;
@@ -93,6 +103,8 @@ int	main(void)
 	printf("Result: %i\n\n", result);
 
 */
+
+
 /*
 	result = printf("Teste 1: %i.\n", 5000);
 	printf("Result: %i\n\n", result);
@@ -332,7 +344,7 @@ int	main(void)
 	result = ft_printf("Teste 15: %+0i.\n", 5000);
 	printf("Result: %i\n\n", result);
 */
-	/*
+/*
  	result = ft_printf("#1 Ola %15.5s.", "Jamaicano");
 	printf("Result: %i\n\n", result);
  	result = printf("#1 Ola %15.5s.", "Jamaicano");

@@ -3,24 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_uns.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 22:52:31 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/27 00:18:38 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 11:04:24 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
+#include <stdio.h>
 
 char	*ft_utoa(unsigned int n)
 {
 	char					*result;
 	int						digit_length;
-	unsigned int			n_copy;
+	long					n_copy;
 
 	digit_length = 0;
 	n_copy = n;
+	if (n == 0)
+		digit_length++;
 	while (n_copy != 0)
 	{
 		n_copy = n_copy / 10;
@@ -39,7 +42,6 @@ char	*ft_utoa(unsigned int n)
 	return (result);
 }
 
-
 int	ft_printf_unsint(unsigned int unsigned_n, t_flags *flag)
 {
 	char	*str;
@@ -57,7 +59,9 @@ int	ft_printf_unsint(unsigned int unsigned_n, t_flags *flag)
 		flag->plus = 0;
 	if (flag->precision)
 		str = ft_flag_padding(str, flag, 1);
-	count = ft_flag_align(str, flag);
+	str = ft_flag_align(str, flag, ' ');
+	ft_putstr_fd(str, 1);
+	count = ft_strlen(str);
 	free(flag);
 	return (count);
 }

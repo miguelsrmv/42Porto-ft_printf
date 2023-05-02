@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_flag_process.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 00:01:24 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/28 14:42:54 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 10:23:58 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ char	*ft_flag_space(char *string)
 	return (newstr);
 }
 
-int	ft_flag_align(char *string, t_flags *flag)
+char	*ft_flag_align(char *string, t_flags *flag, char c)
 {
 	char	*newstr;
 	int		i;
-	int		count;
 
 	newstr = (char *)malloc(ft_strlen(string) + 1);
 	if (!newstr)
@@ -39,18 +38,16 @@ int	ft_flag_align(char *string, t_flags *flag)
 	{
 		ft_strlcpy(newstr, string, ft_strlen(string) + 1);
 		while (i < (int)(flag->width - ft_strlen(string)))
-			newstr[ft_strlen(string) + i++] = ' ';
+			newstr[ft_strlen(string) + i++] = c;
 	}
 	else
 	{
 		while (i < (int)(flag->width - ft_strlen(string)))
-			newstr[i++] = ' ';
+			newstr[i++] = c;
 		ft_strlcpy(&newstr[i], string, ft_strlen(string) + 1);
 	}
-	ft_putstr_fd(newstr, 1);
-	count = ft_strlen(newstr);
-	free(newstr);
-	return (count);
+	free(string);
+	return (newstr);
 }
 
 char	*ft_flag_padding(char *string, t_flags *flag, int integer)
@@ -66,12 +63,12 @@ char	*ft_flag_padding(char *string, t_flags *flag, int integer)
 	{
 		sign = '-';
 		string = ft_substr(string, 1, ft_strlen(string));
-		(int)(flag->precision)++;
+		(flag->precision) = (flag->precision) + 1;
 	}
 	else
 		sign = '+';
 	if (integer >= 0 && flag->plus)
-		(int)(flag->precision)++;
+		(flag->precision) = (flag->precision) + 1;
 	i = 0;
 	if (flag->plus || integer < 0)
 		newstr[i++] = sign;
@@ -85,8 +82,14 @@ char	*ft_flag_hashtag(char *string)
 {
 	char	*newstr;
 	int		i;
+	int		index;
 
-	newstr = (char *)malloc(2 + ft_strlen(string) + 1);
+	index = 0;
+	if (string[0] == '0')
+		index++;
+	if (string[1] == '0')
+		index++;
+	newstr = (char *)malloc(ft_strlen(&string[index]) + 1);
 	if (!newstr)
 		return (0);
 	i = 0;

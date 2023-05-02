@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:37:39 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/28 09:05:36 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 11:20:37 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
-
+#include <stdio.h>
 /*
 int	ft_str_format(char *string, t_flags *flag)
 {
@@ -49,6 +49,12 @@ int	ft_printf_string(char *string, t_flags *flag)
 	char	*substr;
 	int		count;
 
+	if (!string)
+	{
+		ft_putstr_fd("(null)", 1);
+		free(flag);
+		return (6);
+	}
 	if (!flag->precision)
 		flag->precision = ft_strlen(string);
 	substr = ft_substr(string, 0, flag->precision);
@@ -58,8 +64,9 @@ int	ft_printf_string(char *string, t_flags *flag)
 		free(flag);
 		return (6);
 	}
-	count = ft_flag_align(substr, flag);
-	free(substr);
+	substr = ft_flag_align(substr, flag, ' ');
+	ft_putstr_fd(substr, 1);
+	count = ft_strlen(substr);
 	free(flag);
 	return (count);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:33:35 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/28 09:04:04 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 09:38:12 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ft_printf_int(int integer, t_flags *flag)
 {
 	char	*str;
 	int		count;
+	char	c;
 
 	str = ft_itoa(integer);
 	if (!str)
@@ -30,7 +31,13 @@ int	ft_printf_int(int integer, t_flags *flag)
 		flag->width = ft_strlen(str);
 	if (flag->precision || flag->plus)
 		str = ft_flag_padding(str, flag, integer);
-	count = ft_flag_align(str, flag);
+	if (flag ->zero)
+		c = '0';
+	else
+		c = ' ';
+	str = ft_flag_align(str, flag, c);
+	ft_putstr_fd(str, 1);
+	count = ft_strlen(str);
 	free(flag);
 	return (count);
 }
