@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 00:01:24 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 12:51:52 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 14:28:00 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ char	*ft_flag_align(char *string, t_flags *flag, char c)
 {
 	char	*newstr;
 	int		i;
-
+/*
+	printf("** 2 Substr is %s, flag-width is %i, flag-precision is %i, strlen is %i **", string, flag->width, flag->precision, ft_strlen(string));
+	printf("##%i %i##", ft_strlen("(null)"), ft_strlen(string));
+*/
 	newstr = (char *)malloc(ft_strlen(string) + 1);
 	if (!newstr)
 		return (0);
