@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:20:48 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 12:04:19 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:53:28 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,5 @@ int	ft_printf_ptr(void *address, t_flags *flag)
 	str = ft_flag_hashtag(str);
 	str = ft_flag_align(str, flag, ' ');
 	ft_putstr_fd(str, 1);
-	free(flag);
 	return (ft_strlen(str));
 }

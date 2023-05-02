@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:39:15 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 11:25:45 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:53:03 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	check_arg(char *string, int *i, va_list args)
 		counter += ft_printf_base(va_arg(args, int), "0123456789ABCDEF", flag);
 	else if (string[*i] == 'p')
 		counter += ft_printf_ptr(va_arg(args, void *), flag);
+	free(flag);
 	return (counter);
 }
 

@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 08:22:52 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 11:28:09 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:53:20 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,5 @@ int	ft_printf_base(int integer, char *base, t_flags *flag)
 	str = ft_flag_align(str, flag, c);
 	ft_putstr_fd(str, 1);
 	count = ft_strlen(str);
-	free(flag);
 	return (count);
 }

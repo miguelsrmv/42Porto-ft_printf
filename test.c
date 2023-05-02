@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:08:54 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 12:01:28 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 13:10:08 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	main(void)
 
 	int result;
 
-	result = printf("Teste 1: %p.\n", (void *)0);
+	result = printf(" NULL %s NULL ", NULL);
 	printf("Result: %i\n\n", result);
-	result = ft_printf("Teste 1: %p.\n", (void *)0);
+	result = ft_printf(" NULL %s NULL ", NULL);
 	printf("Result: %i\n\n", result);
 
 	

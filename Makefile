@@ -6,7 +6,7 @@
 #    By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 16:13:23 by mde-sa--          #+#    #+#              #
-#    Updated: 2023/05/02 11:15:50 by mde-sa--         ###   ########.fr        #
+#    Updated: 2023/05/02 13:08:03 by mde-sa--         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = libftprintf.a
 
 CC = cc
 
-FLAGS = -Wall -Wextra -Werror
 
 SRC		=	${wildcard *.c} ${wildcard libft/*.c}
 
@@ -26,9 +25,11 @@ AR = ar -rc
 
 
 %.o : %.c 
-	@${CC} ${FLAGS} -c $< -I . -o $@
+	@${CC} -c $< -I . -o $@
 
 all: $(NAME)
+
+bonus: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C libft
@@ -38,7 +39,7 @@ $(NAME): $(OBJ)
 test:
 	@make
 	@make clean
-	@cc -Wall -Wextra -Werror -I. test.c libftprintf.a -o a.out && ./a.out
+	@cc -I. test.c libftprintf.a -o a.out && ./a.out
 
 
 clean:

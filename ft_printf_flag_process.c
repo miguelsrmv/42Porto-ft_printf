@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 00:01:24 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 10:23:58 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:51:52 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	*ft_flag_space(char *string)
 		return (0);
 	newstr[0] = ' ';
 	ft_strlcpy(&newstr[1], string, ft_strlen(string) + 1);
+	free(string);
 	return (newstr);
 }
 
@@ -75,6 +76,7 @@ char	*ft_flag_padding(char *string, t_flags *flag, int integer)
 	while (i < (int)(flag->precision - ft_strlen(string)))
 		newstr[i++] = '0';
 	ft_strlcpy(&newstr[i], string, ft_strlen(string) + 1);
+	free(string);
 	return (newstr);
 }
 
@@ -96,5 +98,6 @@ char	*ft_flag_hashtag(char *string)
 	newstr[i++] = '0';
 	newstr[i++] = 'x';
 	ft_strlcpy(&newstr[i], string, ft_strlen(string) + 1);
+	free(string);
 	return (newstr);
 }
