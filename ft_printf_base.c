@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 08:22:52 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/28 09:01:35 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/28 15:32:14 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,10 @@ int	ft_printf_base(int integer, char *base, t_flags *flag)
 	}
 	if (flag->space && integer >= 0)
 		str = ft_flag_space(str);
-	if (!flag->width)
+	if (!flag->width) ///// ACRESCENTAR SE SPACE / 0 E VER NOS OUTROS ARGUMENTS
 		flag->width = ft_strlen(str);
+	if (flag->hashtag && integer != 0)
+		str = ft_flag_hashtag(str);
 	if (flag->precision || flag->plus)
 		str = ft_flag_padding(str, flag, integer);
 	count = ft_flag_align(str, flag);

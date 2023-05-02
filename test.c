@@ -6,7 +6,7 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:08:54 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/27 00:22:10 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/28 15:30:40 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,15 @@
 
 int	main(void)
 {
+	
 	int result;
 	
+	result = printf("Teste 1: %8i.\n", 161616);
+	printf("Result: %i\n\n", result);
+	result = printf("Teste 1: %0#8x.\n", 161616);
+	printf("Result: %i\n\n", result);
+	result = ft_printf("Teste 1: %0#8x.\n", 161616);
+	printf("Result: %i\n\n", result);
 	/*
 	UNS INT RESULT
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_flagprocess.c                            :+:      :+:    :+:   */
+/*   ft_printf_flag_process.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 00:01:24 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/04/27 00:20:50 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/04/28 14:42:54 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,21 @@ char	*ft_flag_padding(char *string, t_flags *flag, int integer)
 		newstr[i++] = sign;
 	while (i < (int)(flag->precision - ft_strlen(string)))
 		newstr[i++] = '0';
+	ft_strlcpy(&newstr[i], string, ft_strlen(string) + 1);
+	return (newstr);
+}
+
+char	*ft_flag_hashtag(char *string)
+{
+	char	*newstr;
+	int		i;
+
+	newstr = (char *)malloc(2 + ft_strlen(string) + 1);
+	if (!newstr)
+		return (0);
+	i = 0;
+	newstr[i++] = '0';
+	newstr[i++] = 'x';
 	ft_strlcpy(&newstr[i], string, ft_strlen(string) + 1);
 	return (newstr);
 }
