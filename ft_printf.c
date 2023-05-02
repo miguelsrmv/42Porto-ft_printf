@@ -6,11 +6,10 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:39:15 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 16:15:59 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:26:42 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "ft_printf.h"
 #include <stdio.h>
 
@@ -18,6 +17,7 @@ int	check_arg(char *string, int *i, va_list args)
 {
 	int		counter;
 
+	(*i)++;
 	counter = 0;
 	if (string[*i] == '%')
 		counter += ft_printf_char('%');

@@ -6,12 +6,11 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 22:52:31 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 16:28:40 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:24:14 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 char	*ft_utoa(unsigned int n)
 {

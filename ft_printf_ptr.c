@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_point.c                                  :+:      :+:    :+:   */
+/*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:20:48 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 16:35:36 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:51:44 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 char	*ft_lutoa_base(long unsigned int address, char *base)
 {
@@ -35,10 +34,25 @@ char	*ft_lutoa_base(long unsigned int address, char *base)
 	return (ft_strrev(str));
 }
 
+char	*add_0x_prefix(char *str)
+{
+	char	*new_str;
+
+	new_str = (char *)malloc((sizeof(char) * 32) + 1);
+	if (!new_str)
+		return (NULL);
+	new_str[0] = '0';
+	new_str[1] = 'x';
+	ft_strlcpy(&new_str[2], str, ft_strlen(str) + 1);
+	free(str);
+	return (new_str);
+}
+
 int	ft_printf_ptr(void *address)
 {
 	long unsigned int	cast_address;
 	char				*str;
+	int					count;
 
 	if (!address)
 	{
@@ -49,6 +63,9 @@ int	ft_printf_ptr(void *address)
 	str = ft_lutoa_base(cast_address, "0123456789abcdef");
 	if (!str)
 		return (0);
+	str = add_0x_prefix(str);
 	ft_putstr_fd(str, 1);
-	return (ft_strlen(str));
+	count = ft_strlen(str);
+	free(str);
+	return (count);
 }

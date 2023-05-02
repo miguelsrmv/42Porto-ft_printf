@@ -6,11 +6,10 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:22:18 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 16:16:50 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:24:03 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_printf_char(char c)

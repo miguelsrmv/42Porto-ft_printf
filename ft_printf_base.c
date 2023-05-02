@@ -6,13 +6,11 @@
 /*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 08:22:52 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 16:29:47 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:24:00 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
-#include <stdio.h>
 
 char	*ft_strrev(char *str)
 {
