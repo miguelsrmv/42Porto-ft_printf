@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:39:15 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 12:53:03 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:15:59 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,25 @@
 
 int	check_arg(char *string, int *i, va_list args)
 {
-	t_flags	*flag;
 	int		counter;
 
-	flag = ft_checkflag(string, i);
 	counter = 0;
 	if (string[*i] == '%')
-		counter += ft_printf_char('%', flag);
+		counter += ft_printf_char('%');
 	else if (string[*i] == 'c')
-		counter += ft_printf_char(va_arg(args, int), flag);
+		counter += ft_printf_char(va_arg(args, int));
 	else if (string[*i] == 's')
-		counter += ft_printf_string(va_arg(args, char *), flag);
+		counter += ft_printf_string(va_arg(args, char *));
 	else if (string[*i] == 'd' || string[*i] == 'i')
-		counter += ft_printf_int(va_arg(args, int), flag);
+		counter += ft_printf_int(va_arg(args, int));
 	else if (string[*i] == 'u')
-		counter += ft_printf_unsint(va_arg(args, unsigned int), flag);
+		counter += ft_printf_unsint(va_arg(args, unsigned int));
 	else if (string[*i] == 'x')
-		counter += ft_printf_base(va_arg(args, int), "0123456789abcdef", flag);
+		counter += ft_printf_base(va_arg(args, int), "0123456789abcdef");
 	else if (string[*i] == 'X')
-		counter += ft_printf_base(va_arg(args, int), "0123456789ABCDEF", flag);
+		counter += ft_printf_base(va_arg(args, int), "0123456789ABCDEF");
 	else if (string[*i] == 'p')
-		counter += ft_printf_ptr(va_arg(args, void *), flag);
-	free(flag);
+		counter += ft_printf_ptr(va_arg(args, void *));
 	return (counter);
 }
 

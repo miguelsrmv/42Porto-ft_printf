@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:01:16 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 13:29:22 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:37:35 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 ** DESCRIPTION: The strlen() function computes the length of the string s.
 */
 
-#include	"libft.h"
-#include <stdio.h>
+#include        "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
-	if (!str)
-		return(0);
 	i = 0;
 	while (str[i])
-		i++;
+			i++;
 	return (i);
 }
