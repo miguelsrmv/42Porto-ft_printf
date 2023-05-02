@@ -6,7 +6,7 @@
 #    By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 16:13:23 by mde-sa--          #+#    #+#              #
-#    Updated: 2023/05/02 16:38:49 by mde-sa--         ###   ########.fr        #
+#    Updated: 2023/05/02 17:54:19 by mde-sa--         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ RM = rm -f
 AR = ar -rc
 
 
-%.o : %.c 
+%.o: %.c 
 	@${CC} ${FLAGS} -c $< -I . -o $@
 
 all: $(NAME)
@@ -34,12 +34,6 @@ $(NAME): $(OBJ)
 	make -C libft
 	cp libft/libft.a $(NAME)
 	$(AR) $(NAME) $(OBJ)
-
-test:
-	@make
-	@make clean
-	@cc -Wall -Wextra -Werror -I. test.c libftprintf.a -o a.out && ./a.out
-
 
 clean:
 	@make clean -C libft
