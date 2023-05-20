@@ -6,7 +6,7 @@
 #    By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 16:13:23 by mde-sa--          #+#    #+#              #
-#    Updated: 2023/05/02 17:54:19 by mde-sa--         ###   ########.fr        #
+#    Updated: 2023/05/02 18:23:52 by mde-sa--         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ AR = ar -rc
 
 
 %.o: %.c 
-	@${CC} ${FLAGS} -c $< -I . -o $@
+	${CC} ${FLAGS} -c $< -I . -o $@
 
 all: $(NAME)
 
@@ -36,11 +36,11 @@ $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
 clean:
-	@make clean -C libft
-	@$(RM) $(OBJ)
+	make clean -C libft
+	$(RM) $(OBJ)
 
 fclean: clean
-	@make fclean -C libft
-	@$(RM) $(OBJ)
+	make fclean -C libft
+	$(RM) $(OBJ)
 
 re: fclean all
