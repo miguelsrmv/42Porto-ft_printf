@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 08:22:52 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 17:24:00 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/24 14:22:55 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ int	ft_printf_base(int integer, char *base)
 		return (0);
 	ft_putstr_fd(str, 1);
 	count = ft_strlen(str);
+	free(str);
 	return (count);
 }

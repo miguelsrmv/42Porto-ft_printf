@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_uns.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 22:52:31 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 17:24:14 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/24 14:23:21 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ int	ft_printf_unsint(unsigned int unsigned_n)
 		return (0);
 	ft_putstr_fd(str, 1);
 	count = ft_strlen(str);
+	free(str);
 	return (count);
 }

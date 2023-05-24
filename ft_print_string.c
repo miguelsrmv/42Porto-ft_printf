@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-sa-- <mde-sa--@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: mde-sa-- <mde-sa--@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:37:39 by mde-sa--          #+#    #+#             */
-/*   Updated: 2023/05/02 17:28:01 by mde-sa--         ###   ########.fr       */
+/*   Updated: 2023/05/24 14:22:20 by mde-sa--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int	ft_printf_string(char *string)
 	}
 	ft_putstr_fd(substr, 1);
 	count = ft_strlen(substr);
+	free(substr);
 	return (count);
 }
